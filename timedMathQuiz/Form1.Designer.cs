@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             timeLabel = new Label();
             label1 = new Label();
             plusLeftLabel = new Label();
@@ -51,6 +52,7 @@
             dividedRightLabel = new Label();
             dividedLeftLabel = new Label();
             startButton = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)sum).BeginInit();
             ((System.ComponentModel.ISupportInitialize)difference).BeginInit();
             ((System.ComponentModel.ISupportInitialize)product).BeginInit();
@@ -63,7 +65,7 @@
             timeLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             timeLabel.Location = new Point(270, 9);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(200, 30);
+            timeLabel.Size = new Size(200, 40);
             timeLabel.TabIndex = 0;
             timeLabel.Click += label1_Click;
             // 
@@ -265,6 +267,11 @@
             startButton.UseVisualStyleBackColor = true;
             startButton.Click += startButton_Click;
             // 
+            // timer1
+            // 
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -330,5 +337,6 @@
         private Label dividedRightLabel;
         private Label dividedLeftLabel;
         private Button startButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
