@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            timeLabel = new Label();
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // timeLabel
+            // 
+            timeLabel.BorderStyle = BorderStyle.FixedSingle;
+            timeLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            timeLabel.Location = new Point(270, 9);
+            timeLabel.Name = "timeLabel";
+            timeLabel.Size = new Size(200, 30);
+            timeLabel.TabIndex = 0;
+            timeLabel.Click += label1_Click;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(140, -1);
+            label1.Name = "label1";
+            label1.Size = new Size(130, 50);
+            label1.TabIndex = 1;
+            label1.Text = "Time Left";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(482, 353);
+            Controls.Add(label1);
+            Controls.Add(timeLabel);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            Name = "Form1";
+            Text = "Andrew Meyers Math Quiz";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Label timeLabel;
+        private Label label1;
     }
 }
