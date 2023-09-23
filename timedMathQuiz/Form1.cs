@@ -11,5 +11,10 @@ namespace timedMathQuiz
         {
 
         }
+
+        private void product_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
