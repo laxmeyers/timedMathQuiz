@@ -53,6 +53,7 @@
             dividedLeftLabel = new Label();
             startButton = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            currentDate = new Label();
             ((System.ComponentModel.ISupportInitialize)sum).BeginInit();
             ((System.ComponentModel.ISupportInitialize)difference).BeginInit();
             ((System.ComponentModel.ISupportInitialize)product).BeginInit();
@@ -272,11 +273,21 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // currentDate
+            // 
+            currentDate.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            currentDate.Location = new Point(4, -1);
+            currentDate.Name = "currentDate";
+            currentDate.Size = new Size(130, 50);
+            currentDate.TabIndex = 21;
+            currentDate.Click += date_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(482, 353);
+            Controls.Add(currentDate);
             Controls.Add(startButton);
             Controls.Add(quotient);
             Controls.Add(label11);
@@ -304,6 +315,7 @@
             MaximizeBox = false;
             Name = "Form1";
             Text = "Andrew Meyers Math Quiz";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)sum).EndInit();
             ((System.ComponentModel.ISupportInitialize)difference).EndInit();
             ((System.ComponentModel.ISupportInitialize)product).EndInit();
@@ -338,5 +350,6 @@
         private Label dividedLeftLabel;
         private Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private Label currentDate;
     }
 }

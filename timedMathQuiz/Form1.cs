@@ -21,6 +21,8 @@ namespace timedMathQuiz
         //for the clock
         int timeLeft;
 
+        //showing current date
+
         public void StartQuiz()
         {
             addend1 = randomizer.Next(51);
@@ -76,6 +78,8 @@ namespace timedMathQuiz
         public Form1()
         {
             InitializeComponent();
+            currentDate.Text = DateTime.Now.ToString();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -119,6 +123,16 @@ namespace timedMathQuiz
                 quotient.Value = dividend / divisor;
                 startButton.Enabled = true;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_Click(object sender, EventArgs e)
+        {
+            currentDate.Text = DateTime.Now.ToString();
         }
     }
 }
