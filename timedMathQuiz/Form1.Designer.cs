@@ -263,6 +263,7 @@
             startButton.TabIndex = 0;
             startButton.Text = "Start the Quiz";
             startButton.UseVisualStyleBackColor = true;
+            startButton.Click += startButton_Click;
             // 
             // Form1
             // 
