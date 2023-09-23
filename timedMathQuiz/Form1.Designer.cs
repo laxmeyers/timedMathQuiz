@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             timeLabel = new Label();
             label1 = new Label();
             plusLeftLabel = new Label();
@@ -312,6 +313,7 @@
             Controls.Add(label1);
             Controls.Add(timeLabel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
             Text = "Andrew Meyers Math Quiz";
