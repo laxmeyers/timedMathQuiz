@@ -30,6 +30,10 @@
         {
             timeLabel = new Label();
             label1 = new Label();
+            plusLeftLabel = new Label();
+            plusRightLabel = new Label();
+            label3 = new Label();
+            plusLabel = new Label();
             SuspendLayout();
             // 
             // timeLabel
@@ -51,11 +55,51 @@
             label1.TabIndex = 1;
             label1.Text = "Time Left";
             // 
+            // plusLeftLabel
+            // 
+            plusLeftLabel.Location = new Point(50, 75);
+            plusLeftLabel.Name = "plusLeftLabel";
+            plusLeftLabel.Size = new Size(60, 50);
+            plusLeftLabel.TabIndex = 2;
+            plusLeftLabel.Text = "?";
+            plusLeftLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // plusRightLabel
+            // 
+            plusRightLabel.Location = new Point(182, 75);
+            plusRightLabel.Name = "plusRightLabel";
+            plusRightLabel.Size = new Size(60, 50);
+            plusRightLabel.TabIndex = 3;
+            plusRightLabel.Text = "?";
+            plusRightLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.Location = new Point(248, 75);
+            label3.Name = "label3";
+            label3.Size = new Size(60, 50);
+            label3.TabIndex = 4;
+            label3.Text = "=";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // plusLabel
+            // 
+            plusLabel.Location = new Point(116, 75);
+            plusLabel.Name = "plusLabel";
+            plusLabel.Size = new Size(60, 50);
+            plusLabel.TabIndex = 5;
+            plusLabel.Text = "+";
+            plusLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(482, 353);
+            Controls.Add(plusLabel);
+            Controls.Add(label3);
+            Controls.Add(plusRightLabel);
+            Controls.Add(plusLeftLabel);
             Controls.Add(label1);
             Controls.Add(timeLabel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -69,5 +113,9 @@
 
         private Label timeLabel;
         private Label label1;
+        private Label plusLeftLabel;
+        private Label plusRightLabel;
+        private Label label3;
+        private Label plusLabel;
     }
 }
